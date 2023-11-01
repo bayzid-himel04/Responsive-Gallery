@@ -1,0 +1,57 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  /* src/Gallery.css */
+  .gallery-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the tick stays within the image box */
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+  }
+  .selection-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 152, 219, 0.7); /* Blue overlay color with alpha */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+  }
+  
+  .tick {
+    color: #062af5;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .gallery-item.selected {
+    border-color: #3498db;
+  }
+  
+  .gallery-item.feature {
+    border-color: #e74c3c;
+    transform: scale(1.1);
+  }
+  
